@@ -1,0 +1,126 @@
+@import "../general.scss";
+
+$gold: #bba238;
+$gray-dark: #303030;
+
+body {
+  margin: 2rem;
+}
+
+.header-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 20px;
+
+  .header-text-label {
+    font-size: 1.1rem;
+    color: $gold;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .header-left-side-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border-left: 1px solid $gray-dark;
+    padding-left: 1rem;
+
+    > * {
+      margin-bottom: 0.8rem;
+    }
+
+    #company-details,
+    #company-address {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .header-right-side-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border-left: 1px solid $gray-dark;
+    padding-left: 1rem;
+
+    #client-details {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.8rem;
+    }
+  }
+
+  .company-logo {
+    height: 5rem;
+  }
+}
+
+.entity-label {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 2rem 1rem;
+}
+
+.entity-details-wrapper {
+  margin: 1rem;
+
+  > * {
+    margin-right: 1.5rem;
+  }
+
+  .entity-property-label {
+    text-transform: uppercase;
+  }
+
+  [data-element="entity-details-wrapper-invoice-number-label"],
+  [data-element="entity-details-wrapper-amount-due"] {
+    color: $gold;
+    font-weight: bold;
+  }
+}
+
+#product-table {
+  margin-top: 3rem;
+  min-width: 100%;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+
+  > thead {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    > tr > th {
+      font-size: 1.1rem;
+      padding-bottom: 1.5rem;
+      padding-left: 1rem;
+      border-left: 1px solid;
+    }
+  }
+
+  > tbody {
+    > tr {
+      > td {
+        padding: 1rem;
+        border-left: 1px solid;
+      }
+    }
+  }
+
+  > tfoot {
+    > tr {
+      > td {
+        padding: 1rem;
+      }
+
+      > td:nth-last-child(1),
+      td:nth-last-child(2) {
+        border-left: 1px solid;
+      }
+    }
+
+    [data-element="product-table-balance-due-label"],
+    [data-element="product-table-balance-due"] {
+      font-weight: bold;
+    }
+  }
+}

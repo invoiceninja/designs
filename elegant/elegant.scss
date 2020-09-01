@@ -1,0 +1,115 @@
+@import "../general.scss";
+
+$green-dark: #396d49;
+
+body {
+  margin: 2rem;
+}
+
+.company-logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 2.5rem;
+  border-bottom: 4px solid;
+
+  .company-logo {
+    height: 5rem;
+  }
+}
+
+.double-border {
+  margin-top: 3px;
+  border-color: black;
+}
+
+.client-entity-wrapper {
+  display: grid;
+  grid-template-columns: 1.8fr 1.2fr;
+  margin-top: 3rem;
+  gap: 10px;
+
+  .wrapper-info-text {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  .wrapper-left-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    #client-details,
+    #company-details,
+    #company-address {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5rem;
+    }
+
+    .company-info {
+      border-left: 1px solid;
+      padding-left: 1rem;
+    }
+  }
+
+  #entity-details {
+    text-align: left;
+    margin-top: 0.5rem;
+    min-width: 100%;
+    > tr,
+    th {
+      font-weight: normal;
+    }
+  }
+}
+
+#product-table {
+  margin-top: 3rem;
+  min-width: 100%;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+
+  > thead {
+    text-align: left;
+    > tr > th {
+      font-size: 1.1rem;
+      padding-bottom: 1.5rem;
+      padding-left: 1rem;
+      color: $green-dark;
+      font-weight: medium;
+    }
+  }
+
+  > tbody {
+    > tr {
+      > td {
+        border-bottom: 1px solid;
+        padding: 1rem;
+      }
+    }
+  }
+
+  > tfoot {
+    > tr {
+      > td {
+        padding: 1rem;
+      }
+    }
+
+    [data-element="product-table-balance-due-label"],
+    [data-element="product-table-balance-due"] {
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+    }
+  }
+}
+
+.thanks-label {
+  text-align: center;
+  margin-top: 6rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid;
+}

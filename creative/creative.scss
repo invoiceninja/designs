@@ -1,0 +1,104 @@
+@import "../general.scss";
+
+$pink: #b21c53;
+$gray-light: #e8e8e8;
+
+body {
+  margin: 2rem;
+}
+
+.header-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
+  .company-logo {
+    height: 5rem;
+  }
+
+  #client-details,
+  #company-details,
+  #company-address {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #client-details > *:first-child {
+    font-weight: bold;
+  }
+
+  .company-info-wrapper > * {
+    margin-bottom: 1rem;
+  }
+}
+
+.entity-label-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 3rem;
+
+  .entity-label > * {
+    font-size: 3rem;
+  }
+
+  .entity-label > *:first-child {
+    text-transform: uppercase;
+  }
+
+  .entity-label > *:last-child {
+    color: $pink;
+    font-style: italic;
+  }
+
+  #entity-details {
+    text-align: left;
+    > tr,
+    th {
+      font-weight: normal;
+    }
+  }
+}
+
+#product-table {
+  margin-top: 3rem;
+  min-width: 100%;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+  border-top: 5px solid $pink;
+
+  > thead {
+    text-align: left;
+    > tr > th {
+      font-size: 1.1rem;
+      padding: 1rem;
+    }
+  }
+
+  > tbody {
+    > tr {
+      > td {
+        padding: 1rem;
+      }
+    }
+    > tr:nth-child(odd) {
+      background-color: $gray-light;
+    }
+  }
+
+  > tfoot {
+    > tr {
+      > td {
+        padding: 1rem;
+      }
+    }
+
+    > tr:last-child > td {
+      border-top: 5px solid $pink;
+    }
+
+    [data-element="product-table-balance-due"] {
+      color: $pink;
+      font-weight: bold;
+    }
+  }
+}

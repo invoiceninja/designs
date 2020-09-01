@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Elegant</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="elegant.css" />
+  </head>
+
+  <body>
+    <!-- company_logo -->
+    <div class="company-logo-wrapper">
+      <img
+        class="company-logo"
+        src="https://www.invoiceninja.com/wp-content/uploads/2015/10/logo-blk-vertical-1.png"
+        alt="Invoice Ninja logo"
+      />
+    </div>
+
+    <hr class="double-border" />
+
+    <div class="client-entity-wrapper">
+      <div class="wrapper-left-side">
+        <div class="text-with-client">
+          <h2 class="wrapper-info-text">Balance due</h2>
+          <!-- client_details -->
+          <div id="client-details">
+            <span>Gold & Wong Associates</span>
+            <span>654 Wall Street, 101D</span>
+            <span>New York, New York 11213</span>
+            <span>United States</span>
+            <span>demo@invoiceninja.com</span>
+          </div>
+        </div>
+
+        <div class="company-info">
+          <!-- company_details -->
+          <div id="company-details">
+            <span>Ninja Sample</span>
+            <span>contact@invoiceninja.com</span>
+            <span>1-800-555-Ninja</span>
+          </div>
+
+          <!-- company_address -->
+          <div id="company-address">
+            <span>123 Ninja Blvd</span>
+            <span>NinjaLand, 97315</span>
+            <span>United States</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper-right-side">
+        <!-- entity_details -->
+        <h2 class="wrapper-info-text">Details</h2>
+        <table id="entity-details">
+          <tr>
+            <th>Invoice Number</th>
+            <th>09136-C</th>
+          </tr>
+          <tr>
+            <th>PO Number</th>
+            <th>654B</th>
+          </tr>
+          <tr>
+            <th>Invoice Date</th>
+            <th>Jul 6, 2014</th>
+          </tr>
+          <tr>
+            <th>Due Date</th>
+            <th>Oct 9, 2014</th>
+          </tr>
+          <tr>
+            <th>Balance Due</th>
+            <th>R555.00</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- product_table -->
+    <table id="product-table" cellspacing="0">
+      <thead>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Unit Cost</th>
+        <th>Quantity</th>
+        <th>Line Total</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Website Analysis</td>
+          <td>Trend and data analysis</td>
+          <td>50.00</td>
+          <td>1</td>
+          <td>R50.00</td>
+        </tr>
+        <tr>
+          <td>Website Analysis</td>
+          <td>Routine SEO site monitoring</td>
+          <td>75.00</td>
+          <td>1</td>
+          <td>R75.00</td>
+        </tr>
+        <tr>
+          <td>Website Maintenance</td>
+          <td>Broken links identified and fixed</td>
+          <td>15.00</td>
+          <td>19</td>
+          <td>R150.00</td>
+        </tr>
+        <tr>
+          <td>Website Maintenance</td>
+          <td>Content page SEO tracking (8 total)</td>
+          <td>35.00</td>
+          <td>8</td>
+          <td>R280.00</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Subtotal</td>
+          <td>R555.00</td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td>Paid to Date</td>
+          <td>R0.00</td>
+        </tr>
+        <tr>
+          <td>Terms: N10</td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td data-element="product-table-balance-due-label">Balance Due</td>
+          <td data-element="product-table-balance-due">R555.00</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <p class="thanks-label">Thanks!</p>
+    <hr class="double-border" />
+  </body>
+</html>

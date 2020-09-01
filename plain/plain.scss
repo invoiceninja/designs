@@ -1,0 +1,81 @@
+@import "../general.scss";
+
+$gray-lighter: #e6e6e6;
+
+body {
+  margin: 2rem;
+}
+
+.header-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .company-logo {
+    height: 5rem;
+  }
+
+  #company-address {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #entity-details {
+    margin-top: 1.5rem;
+    text-align: left;
+    width: 100%;
+    > tr,
+    th {
+      font-weight: normal;
+      padding-left: 0.9rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+
+    [data-element="entity-balance-due-label"],
+    [data-element="entity-balance-due"] {
+      background-color: $gray-lighter;
+    }
+  }
+}
+
+#client-details {
+  display: flex;
+  flex-direction: column;
+}
+
+#product-table {
+  min-width: 100%;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+  margin-top: 3rem;
+
+  > thead {
+    text-align: left;
+    > tr > th {
+      padding: 1rem;
+      background-color: $gray-lighter;
+    }
+  }
+
+  > tbody {
+    > tr {
+      > td {
+        border-bottom: 1px solid $gray-lighter;
+        padding: 1rem;
+      }
+    }
+  }
+
+  > tfoot {
+    > tr {
+      > td {
+        padding: 1rem;
+      }
+    }
+
+    [data-element="product-table-balance-due-label"],
+    [data-element="product-table-balance-due"] {
+      background-color: $gray-lighter;
+    }
+  }
+}

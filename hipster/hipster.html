@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hipster</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="hipster.css" />
+  </head>
+
+  <body>
+    <div class="header-wrapper">
+      <div class="header-left-side-wrapper">
+        <p class="header-text-label">From:</p>
+        <!-- company_details -->
+        <div id="company-details">
+          <span>Ninja Sample</span>
+          <span>contact@invoiceninja.com</span>
+          <span>1-800-555-Ninja</span>
+        </div>
+
+        <!-- company_address -->
+        <div id="company-address">
+          <span>123 Ninja Blvd</span>
+          <span>NinjaLand, 97315</span>
+          <span>United States</span>
+        </div>
+      </div>
+
+      <div class="header-right-side-wrapper">
+        <!-- client_details -->
+        <div>
+          <p class="header-text-label">To:</p>
+          <div id="client-details">
+            <span>Gold & Wong Associates</span>
+            <span>654 Wall Street, 101D</span>
+            <span>New York, New York 11213</span>
+            <span>United States</span>
+            <span>demo@invoiceninja.com</span>
+          </div>
+        </div>
+
+        <!-- company_logo -->
+        <img
+          class="company-logo"
+          src="https://www.invoiceninja.com/wp-content/uploads/2015/10/logo-blk-vertical-1.png"
+          alt="Invoice Ninja logo"
+        />
+      </div>
+    </div>
+
+    <!-- entity_details -->
+    <h1 class="entity-label">Invoice</h1>
+    <div class="entity-details-wrapper">
+      <span>
+        <span
+          class="entity-property-label"
+          data-element="entity-details-wrapper-invoice-number-label"
+          >Invoice no.</span
+        >
+        <span class="entity-property-value">208027</span>
+      </span>
+      <span>
+        <span class="entity-property-label">Invoice date:</span>
+        <span class="entity-property-value">Sep 6, 2014</span>
+      </span>
+      <span>
+        <span class="entity-property-label">Payment due:</span>
+        <span class="entity-property-value">Sep 18, 2014</span>
+      </span>
+      <span>
+        <span class="entity-property-label">Amount due:</span>
+        <span
+          class="entity-property-value"
+          data-element="entity-details-wrapper-amount-due"
+          >$1,102.95</span
+        >
+      </span>
+    </div>
+
+    <!-- product_table -->
+    <table id="product-table" cellspacing="0">
+      <thead>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Unit Cost</th>
+        <th>Quantity</th>
+        <th>Line Total</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Website Analysis</td>
+          <td>Trend and data analysis</td>
+          <td>50.00</td>
+          <td>1</td>
+          <td>R50.00</td>
+        </tr>
+        <tr>
+          <td>Website Analysis</td>
+          <td>Routine SEO site monitoring</td>
+          <td>75.00</td>
+          <td>1</td>
+          <td>R75.00</td>
+        </tr>
+        <tr>
+          <td>Website Maintenance</td>
+          <td>Broken links identified and fixed</td>
+          <td>15.00</td>
+          <td>19</td>
+          <td>R150.00</td>
+        </tr>
+        <tr>
+          <td>Website Maintenance</td>
+          <td>Content page SEO tracking (8 total)</td>
+          <td>35.00</td>
+          <td>8</td>
+          <td>R280.00</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Subtotal</td>
+          <td>R555.00</td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td>Paid to Date</td>
+          <td>R0.00</td>
+        </tr>
+        <tr>
+          <td colspan="3">Terms: Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, dolorem?</td>
+          <td data-element="product-table-balance-due-label">Balance Due</td>
+          <td data-element="product-table-balance-due">R555.00</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+$orange: #f46521;
+$gray: #fff4e9;
+$gray-darker: #3f3e3c;
+
+$global-padding: 1.5rem;
+$global-margin: $global-padding;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.header-container {
+  background-color: $orange;
+  color: white;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  padding: $global-padding;
+
+  .company-name {
+    font-size: 2.5rem;
+  }
+}
+
+#entity-details {
+  text-align: left;
+  color: $gray !important;
+  > tr,
+  th {
+    font-weight: normal;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.company-logo {
+  height: 5rem;
+}
+
+.logo-client-wrapper {
+  margin: 3rem $global-margin;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+#client-details {
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.table-wrapper {
+  margin: 3rem $global-margin;
+}
+
+#product-table {
+  min-width: 100%;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+
+  > thead {
+    text-align: left;
+    > tr > th {
+      padding: 0.8rem;
+      background-color: $gray-darker;
+      color: white;
+    }
+  }
+
+  > tbody {
+    > tr {
+      > td {
+        border-bottom: 1px solid $gray-darker;
+        padding: 1rem;
+      }
+      > td:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+
+  > tfoot {
+    > tr {
+      > td {
+        padding: 1rem;
+      }
+    }
+
+    [data-element="balance-due-row"] > td {
+      background-color: $gray-darker;
+      color: white;
+    }
+
+    [data-element="balance-due-label"] {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    [data-element="balance-due"] {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.footer-wrapper {
+  display: grid;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: $global-padding;
+  grid-template-columns: 2fr 1fr 1fr;
+  background-color: $orange;
+  color: $gray;
+}
+
+#company-address,
+#company-details {
+  display: flex;
+  flex-direction: column;
+  > * {
+    margin-bottom: 0.5rem;
+  }
+}

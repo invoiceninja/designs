@@ -1,0 +1,125 @@
+$gray-dark: #2d2c2a;
+$gray-light: #ebebeb;
+$cyan: #35a39a;
+
+$global-padding: 2rem;
+$global-margin: $global-padding;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media print {
+  body {
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
+
+.header-wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  background-color: $gray-dark;
+  padding: $global-padding + 1;
+  color: white;
+}
+
+.company-logo {
+  height: 6rem;
+  padding: 2rem;
+  background-color: white;
+  margin: $global-margin;
+  margin-top: -4rem;
+}
+
+#company-details,
+#company-address {
+  display: flex;
+  flex-direction: column;
+}
+
+#client-details {
+  margin: $global-margin;
+  display: flex;
+  flex-direction: column;
+
+  > :first-child {
+    font-weight: bold;
+  }
+}
+
+.client-entity-wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.entity-details-wrapper {
+  background-color: $cyan;
+  padding: $global-padding - 1;
+}
+
+#entity-details {
+  width: 100%;
+  text-align: left;
+  color: white !important;
+  > tr,
+  th {
+    font-weight: normal;
+    padding-bottom: 0.5rem;
+  }
+}
+
+#product-table {
+  min-width: 100%;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+  margin-top: 3rem;
+
+  > thead {
+    text-align: left;
+    > tr > th {
+      padding: $global-padding;
+      font-size: 1.5rem;
+    }
+  }
+
+  > tbody {
+    > tr {
+      > td {
+        padding: $global-padding - 0.5;
+      }
+      > td:first-child {
+        font-weight: bold;
+      }
+    }
+    > tr:nth-child(odd) {
+      background-color: $gray-light;
+    }
+  }
+
+  > tfoot {
+    > tr {
+      > td {
+        padding: $global-padding - 0.5;
+      }
+    }
+
+    [data-element="balance-due-label"],
+    [data-element="balance-due"] {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    [data-element="balance-due"] {
+      color: $cyan;
+    }
+  }
+}

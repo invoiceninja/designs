@@ -1,0 +1,133 @@
+@import "../general.scss";
+
+$green: #009e90;
+$red-dark: #bb3a24;
+
+body {
+  margin: 2rem;
+}
+
+.header-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .company-logo {
+    height: 5rem;
+  }
+
+  .entity-details-wrapper {
+    background-color: $green;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  #entity-details {
+    width: 100%;
+    color: white;
+    text-align: left;
+    > tr,
+    th {
+      font-weight: normal;
+    }
+  }
+}
+
+.contacts-wrapper {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  .contact-label {
+    font-weight: bold;
+    color: $green;
+    margin-left: 1rem;
+  }
+
+  #company-address,
+  #company-details,
+  #client-details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .company-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 1px solid $green;
+    border-bottom: 1px solid $green;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  #client-details {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 1px solid $green;
+    border-bottom: 1px solid $green;
+  }
+}
+
+#product-table {
+  margin-top: 3rem;
+  min-width: 100%;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+
+  > thead {
+    text-align: left;
+    > tr > th {
+      font-size: 1.2rem;
+      padding: 1rem;
+      background: $green;
+      color: white;
+    }
+
+    tr > th:first-child {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    tr > th:last-child {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+
+  > tbody {
+    > tr {
+      > td {
+        border-bottom: 1px solid $green;
+        padding: 1rem;
+      }
+      > td:first-child {
+        color: $red-dark;
+      }
+    }
+  }
+
+  > tfoot {
+    > tr {
+      > td {
+        padding: 1rem;
+      }
+    }
+
+    [data-element="product-table-balance-due-label"] {
+        background-color: $green;
+        color: white;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    [data-element="product-table-balance-due"] {
+        background-color: $green;
+        color: white;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+  }
+}

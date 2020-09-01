@@ -1,0 +1,155 @@
+$gray: #b1b1b1;
+$orange: #ec782f;
+$dark-blue: #394e6b;
+$gray-lighter: #f7f7f7;
+$gray-darker: #e8e8e8;
+
+body {
+  margin: 2rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-container {
+  > span {
+    display: block;
+  }
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.company-logo {
+  height: 4rem;
+}
+
+#company-details {
+  display: flex;
+  flex-direction: column;
+  color: $gray;
+  > * {
+    margin-bottom: 0.8rem;
+  }
+}
+
+#company-address {
+  display: flex;
+  flex-direction: column;
+  color: $gray;
+  > * {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.entity-issued-to {
+  margin-top: 3rem;
+  font-weight: bold;
+}
+
+.client-and-entity-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  gap: 20px;
+}
+
+#client-details {
+  display: flex;
+  flex-direction: column;
+  color: $orange;
+  > * {
+    margin-bottom: 0.5rem;
+  }
+  > span {
+    &:nth-child(1) {
+      font-weight: bold;
+    }
+  }
+}
+
+#entity-details {
+  background-color: $orange;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  width: 100%;
+  color: white;
+  text-align: left;
+  th {
+    font-weight: normal;
+  }
+}
+
+#product-table {
+  margin-top: 3.5rem;
+  min-width: 100%;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+  > thead {
+    text-align: left;
+    background: $dark-blue;
+    > tr {
+      > th {
+        padding: 1rem;
+        color: white;
+        font-weight: semibold;
+        &:first-child {
+          border-top-left-radius: 1rem;
+        }
+        &:last-child {
+          border-top-right-radius: 1rem;
+        }
+      }
+    }
+  }
+  > tbody {
+    > tr {
+      > td {
+        padding: 1rem;
+      }
+      &:nth-child(odd) {
+        > td {
+          background: $gray-darker;
+        }
+      }
+      &:nth-child(even) {
+        > td {
+          background: $gray-lighter;
+        }
+      }
+    }
+  }
+  > tfoot {
+    > tr {
+      > td {
+        padding: 1rem;
+        background: $gray-darker;
+      }
+      &:nth-last-child(1) {
+        > td {
+          &:first-child {
+            border-bottom-left-radius: 1rem;
+          }
+          &:last-child {
+            border-bottom-right-radius: 1rem;
+          }
+        }
+      }
+    }
+    > td {
+      border: none !important;
+    }
+  }
+}
+
+[data-element="product-table-balance-due-label"],
+[data-element="product-table-balance-due"] {
+  color: $dark-blue !important;
+  font-weight: bold !important;
+}
+
+@media print {
+  body {
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
