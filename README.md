@@ -3,7 +3,7 @@
 A source code of Invocie Ninja designs used for invoices, quotes & credits.
 
 ## Installation & usage
-Designs are already compiled to plain CSS. For maintainability reasons, source code is written using [Sass](https://sass-lang.com/). In order to make use of full potential of editing we suggest installing Sass compiler.
+Designs are already compiled to plain CSS. For maintainability reasons, source code is written using [Sass](https://sass-lang.com/). In order to make use of full editing potential, we suggest installing Sass compiler.
 
 ### Compiling templates to plain CSS
 After you [install Sass compiler](https://sass-lang.com/install), compiling is easy as:
