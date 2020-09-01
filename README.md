@@ -7,7 +7,9 @@ Designs are already compiled to plain CSS. For maintainability reasons, source c
 
 ### Compiling templates to plain CSS
 After you [install Sass compiler](https://sass-lang.com/install), compiling is easy as:
-> sass --watch `design/design.scss` `design/design.css`
+```bash
+sass --watch `design/design.scss` `design/design.css`
+```
 
 ## Licence
 The MIT License (MIT). Please see license File for more information.
