@@ -89,12 +89,18 @@ body {
       padding: $global-padding;
       font-size: 1.5rem;
     }
+    > tr > th:last-child {
+      text-align: right;
+    }
   }
 
   > tbody {
     > tr {
       > td {
         padding: $global-padding - 0.5;
+      }
+      > td:last-child {
+        text-align: right;
       }
       > td:first-child {
         font-weight: bold;
@@ -121,5 +127,30 @@ body {
     [data-element="balance-due"] {
       color: $cyan;
     }
+  }
+}
+
+#product-table-footer > {
+  * {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    padding-top: $global-padding - 0.8;
+    padding-left: $global-padding - 0.8;
+    gap: 20px;
+    
+    [data-element="product-table-balance-due-label"],
+    [data-element="product-table-balance-due"] {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+  
+    [data-element="product-table-balance-due"] {
+      color: $cyan;
+    }
+  }
+
+  * > :last-child {
+    text-align: right;
+    padding-right: $global-padding - 0.5;
   }
 }
