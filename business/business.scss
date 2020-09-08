@@ -9,6 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 .header-container {
@@ -97,6 +98,7 @@ body {
         }
         &:last-child {
           border-top-right-radius: 1rem;
+          text-align: right;
         }
       }
     }
@@ -105,6 +107,9 @@ body {
     > tr {
       > td {
         padding: 1rem;
+      }
+      > td:last-child {
+        text-align: right;
       }
       &:nth-child(odd) {
         > td {
@@ -116,27 +121,6 @@ body {
           background: $gray-lighter;
         }
       }
-    }
-  }
-  > tfoot {
-    > tr {
-      > td {
-        padding: 1rem;
-        background: $gray-darker;
-      }
-      &:nth-last-child(1) {
-        > td {
-          &:first-child {
-            border-bottom-left-radius: 1rem;
-          }
-          &:last-child {
-            border-bottom-right-radius: 1rem;
-          }
-        }
-      }
-    }
-    > td {
-      border: none !important;
     }
   }
 }
@@ -151,5 +135,37 @@ body {
   body {
     margin-top: 0;
     margin-right: 0;
+  }
+}
+
+#product-table-footer > {
+  *:last-child {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  * {
+    background-color: $gray-lighter;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 20px;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.8rem;
+
+    [data-element="product-table-balance-due-label"],
+    [data-element="product-table-balance-due"] {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    [data-element="product-table-balance-due"] {
+      color: red;
+    }
+  }
+
+  * > :last-child {
+    text-align: right;
+    padding-right: 1rem;
   }
 }
