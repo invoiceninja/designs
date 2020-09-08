@@ -79,6 +79,9 @@ body {
       color: $green-dark;
       font-weight: medium;
     }
+    > tr > th:last-child {
+      text-align: right;
+    }
   }
 
   > tbody {
@@ -87,20 +90,9 @@ body {
         border-bottom: 1px solid;
         padding: 1rem;
       }
-    }
-  }
-
-  > tfoot {
-    > tr {
-      > td {
-        padding: 1rem;
+      > td:last-child {
+        text-align: right;
       }
-    }
-
-    [data-element="product-table-balance-due-label"],
-    [data-element="product-table-balance-due"] {
-      border-top: 1px solid;
-      border-bottom: 1px solid;
     }
   }
 }
@@ -112,4 +104,29 @@ body {
   font-weight: bold;
   padding-bottom: 1rem;
   border-bottom: 4px solid;
+}
+
+#product-table-footer > {
+  * {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    gap: 20px;
+
+    [data-element="product-table-balance-due-label"],
+    [data-element="product-table-balance-due"] {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    [data-element="product-table-balance-due"] {
+      color: $green-dark;
+    }
+  }
+
+  * > :last-child {
+    text-align: right;
+    padding-right: 1rem - 0.5;
+  }
 }
