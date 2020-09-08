@@ -110,24 +110,6 @@ body {
       background-color: $gray-light;
     }
   }
-
-  > tfoot {
-    > tr {
-      > td {
-        padding: $global-padding - 0.5;
-      }
-    }
-
-    [data-element="balance-due-label"],
-    [data-element="balance-due"] {
-      font-weight: bold;
-      font-size: 1.4rem;
-    }
-
-    [data-element="balance-due"] {
-      color: $cyan;
-    }
-  }
 }
 
 #product-table-footer > {
