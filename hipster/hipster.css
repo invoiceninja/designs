@@ -16,47 +16,70 @@ body {
     padding: 0;
   }
 }
+
 body {
   margin: 2rem;
 }
 
 .header-wrapper {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1.2fr 1.8fr;
+  -ms-grid-columns: 1.2fr 1.8fr;
+      grid-template-columns: 1.2fr 1.8fr;
   gap: 20px;
 }
+
 .header-wrapper .header-text-label {
   font-size: 1.1rem;
   color: #bba238;
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .header-wrapper .header-left-side-wrapper {
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   gap: 10px;
   border-left: 1px solid #303030;
   padding-left: 1rem;
 }
+
 .header-wrapper .header-left-side-wrapper > * {
   margin-bottom: 0.8rem;
 }
+
 .header-wrapper .header-left-side-wrapper #company-details,
 .header-wrapper .header-left-side-wrapper #company-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .header-wrapper .header-right-side-wrapper {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   gap: 10px;
   border-left: 1px solid #303030;
   padding-left: 1rem;
 }
+
 .header-wrapper .header-right-side-wrapper #client-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 0.8rem;
 }
+
 .header-wrapper .company-logo {
   height: 5rem;
 }
@@ -70,14 +93,17 @@ body {
 .entity-details-wrapper {
   margin: 1rem;
 }
+
 .entity-details-wrapper > * {
   margin-right: 1.5rem;
 }
+
 .entity-details-wrapper .entity-property-label {
   text-transform: uppercase;
 }
-.entity-details-wrapper [data-element=entity-details-wrapper-invoice-number-label],
-.entity-details-wrapper [data-element=entity-details-wrapper-amount-due] {
+
+.entity-details-wrapper [data-element="entity-details-wrapper-invoice-number-label"],
+.entity-details-wrapper [data-element="entity-details-wrapper-amount-due"] {
   color: #bba238;
   font-weight: bold;
 }
@@ -88,31 +114,54 @@ body {
   table-layout: fixed;
   overflow-wrap: break-word;
 }
+
 #product-table > thead {
   text-align: left;
   text-transform: uppercase;
   font-weight: bold;
 }
+
 #product-table > thead > tr > th {
   font-size: 1.1rem;
   padding-bottom: 1.5rem;
   padding-left: 1rem;
   border-left: 1px solid;
 }
+
+#product-table > thead > tr > th:last-child {
+  text-align: right;
+}
+
 #product-table > tbody > tr > td {
   padding: 1rem;
   border-left: 1px solid;
 }
-#product-table > tfoot > tr > td {
-  padding: 1rem;
+
+#product-table > tbody > tr td:last-child {
+  text-align: right;
 }
-#product-table > tfoot > tr > td:nth-last-child(1),
-#product-table > tfoot > tr td:nth-last-child(2) {
-  border-left: 1px solid;
+
+#product-table-footer > * {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr 1fr;
+      grid-template-columns: 3fr 1fr 1fr;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  gap: 20px;
 }
-#product-table > tfoot [data-element=product-table-balance-due-label],
-#product-table > tfoot [data-element=product-table-balance-due] {
+
+#product-table-footer > * [data-element="product-table-balance-due-label"],
+#product-table-footer > * [data-element="product-table-balance-due"] {
   font-weight: bold;
 }
 
+#product-table-footer > * [data-element="product-table-balance-due"] {
+  color: #bba238;
+}
+
+#product-table-footer > * > :last-child {
+  text-align: right;
+  padding-right: 1rem;
+}
 /*# sourceMappingURL=hipster.css.map */

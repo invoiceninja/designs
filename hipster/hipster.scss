@@ -95,6 +95,9 @@ body {
       padding-left: 1rem;
       border-left: 1px solid;
     }
+    > tr > th:last-child {
+      text-align: right;
+    }
   }
 
   > tbody {
@@ -103,24 +106,33 @@ body {
         padding: 1rem;
         border-left: 1px solid;
       }
+      td:last-child {
+        text-align: right;
+      }
     }
   }
+}
 
-  > tfoot {
-    > tr {
-      > td {
-        padding: 1rem;
-      }
-
-      > td:nth-last-child(1),
-      td:nth-last-child(2) {
-        border-left: 1px solid;
-      }
-    }
+#product-table-footer > {
+  * {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    gap: 20px;
 
     [data-element="product-table-balance-due-label"],
     [data-element="product-table-balance-due"] {
       font-weight: bold;
     }
+
+    [data-element="product-table-balance-due"] {
+      color: $gold;
+    }
+  }
+
+  * > :last-child {
+    text-align: right;
+    padding-right: 1rem;
   }
 }
