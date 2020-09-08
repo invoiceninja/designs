@@ -102,3 +102,30 @@ body {
     }
   }
 }
+
+#product-table-footer > {
+  * {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    padding-top: 1rem;
+
+    [data-element="product-table-balance-due"] {
+      font-weight: bold;
+      color: $pink;
+    }
+
+    > * {
+      padding-left: 1rem;
+    }
+  }
+
+  *:last-child > * {
+    border-top: 5px solid $pink;
+    padding-top: 1rem;
+  }
+
+  * > :last-child {
+    text-align: right;
+    padding-right: 1rem;
+  }
+}

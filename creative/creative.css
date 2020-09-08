@@ -95,4 +95,25 @@ body {
   font-weight: bold;
 }
 
+#product-table-footer > * {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  padding-top: 1rem;
+}
+#product-table-footer > * [data-element=product-table-balance-due] {
+  font-weight: bold;
+  color: #b21c53;
+}
+#product-table-footer > * > * {
+  padding-left: 1rem;
+}
+#product-table-footer > *:last-child > * {
+  border-top: 5px solid #b21c53;
+  padding-top: 1rem;
+}
+#product-table-footer > * > :last-child {
+  text-align: right;
+  padding-right: 1rem;
+}
+
 /*# sourceMappingURL=creative.css.map */
