@@ -16,13 +16,17 @@ body {
     padding: 0;
   }
 }
+
 .header-container {
   background-color: #f46521;
   color: white;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  -ms-grid-columns: 1.5fr 1fr;
+      grid-template-columns: 1.5fr 1fr;
   padding: 1.5rem;
 }
+
 .header-container .company-name {
   font-size: 2.5rem;
 }
@@ -31,6 +35,7 @@ body {
   text-align: left;
   color: #fff4e9 !important;
 }
+
 #entity-details > tr,
 #entity-details th {
   font-weight: normal;
@@ -43,14 +48,22 @@ body {
 
 .logo-client-wrapper {
   margin: 3rem 1.5rem;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  -ms-grid-columns: 1.5fr 1fr;
+      grid-template-columns: 1.5fr 1fr;
 }
 
 #client-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 #client-details > * {
   margin-bottom: 0.5rem;
 }
@@ -64,55 +77,92 @@ body {
   table-layout: fixed;
   overflow-wrap: break-word;
 }
+
 #product-table > thead {
   text-align: left;
 }
+
 #product-table > thead > tr > th {
   padding: 0.8rem;
   background-color: #3f3e3c;
   color: white;
 }
+
+#product-table > thead > tr > th:last-child {
+  text-align: right;
+}
+
 #product-table > tbody > tr > td {
   border-bottom: 1px solid #3f3e3c;
   padding: 1rem;
 }
+
 #product-table > tbody > tr > td:first-child {
   font-weight: bold;
 }
-#product-table > tfoot > tr > td {
-  padding: 1rem;
-}
-#product-table > tfoot [data-element=balance-due-row] > td {
-  background-color: #3f3e3c;
-  color: white;
-}
-#product-table > tfoot [data-element=balance-due-label] {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-#product-table > tfoot [data-element=balance-due] {
-  font-size: 1.2rem;
+
+#product-table > tbody > tr > td:last-child {
+  text-align: right;
 }
 
 .footer-wrapper {
+  display: -ms-grid;
   display: grid;
   position: fixed;
   bottom: 0;
   width: 100%;
   padding: 1.5rem;
-  grid-template-columns: 2fr 1fr 1fr;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
   background-color: #f46521;
   color: #fff4e9;
 }
 
 #company-address,
 #company-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 #company-address > *,
 #company-details > * {
   margin-bottom: 0.5rem;
 }
 
+#product-table-footer > * {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr 1fr;
+      grid-template-columns: 3fr 1fr 1fr;
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+#product-table-footer > * [data-element="product-table-balance-due-label"],
+#product-table-footer > * [data-element="product-table-balance-due"] {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+#product-table-footer > * > * {
+  padding-left: 1.5rem;
+}
+
+#product-table-footer > * > :last-child {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+#product-table-footer > *:last-child {
+  background-color: #3f3e3c;
+  color: white;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
 /*# sourceMappingURL=modern.css.map */
