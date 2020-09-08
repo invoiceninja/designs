@@ -78,21 +78,17 @@ body {
   font-size: 1.1rem;
   padding: 1rem;
 }
+#product-table > thead > tr > th:last-child {
+  text-align: right;
+}
+#product-table > tbody > tr > td:last-child {
+  text-align: right;
+}
 #product-table > tbody > tr > td {
   padding: 1rem;
 }
 #product-table > tbody > tr:nth-child(odd) {
   background-color: #e8e8e8;
-}
-#product-table > tfoot > tr > td {
-  padding: 1rem;
-}
-#product-table > tfoot > tr:last-child > td {
-  border-top: 5px solid #b21c53;
-}
-#product-table > tfoot [data-element=product-table-balance-due] {
-  color: #b21c53;
-  font-weight: bold;
 }
 
 #product-table-footer > * {

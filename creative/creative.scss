@@ -72,33 +72,22 @@ body {
       font-size: 1.1rem;
       padding: 1rem;
     }
+    > tr > th:last-child {
+      text-align: right;
+    }
   }
 
   > tbody {
     > tr {
+      > td:last-child {
+        text-align: right;
+      }
       > td {
         padding: 1rem;
       }
     }
     > tr:nth-child(odd) {
       background-color: $gray-light;
-    }
-  }
-
-  > tfoot {
-    > tr {
-      > td {
-        padding: 1rem;
-      }
-    }
-
-    > tr:last-child > td {
-      border-top: 5px solid $pink;
-    }
-
-    [data-element="product-table-balance-due"] {
-      color: $pink;
-      font-weight: bold;
     }
   }
 }
