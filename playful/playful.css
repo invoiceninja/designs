@@ -16,34 +16,27 @@ body {
     padding: 0;
   }
 }
-
 body {
   margin: 2rem;
 }
 
 .header-wrapper {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-
 .header-wrapper .company-logo {
   height: 5rem;
 }
-
 .header-wrapper .entity-details-wrapper {
   background-color: #009e90;
   padding: 1rem;
   border-radius: 10px;
 }
-
 .header-wrapper #entity-details {
   width: 100%;
   color: white;
   text-align: left;
 }
-
 .header-wrapper #entity-details > tr,
 .header-wrapper #entity-details th {
   font-weight: normal;
@@ -51,44 +44,31 @@ body {
 
 .contacts-wrapper {
   margin-top: 3rem;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
 }
-
 .contacts-wrapper .contact-label {
   font-weight: bold;
   color: #009e90;
   margin-left: 1rem;
 }
-
 .contacts-wrapper #company-address,
 .contacts-wrapper #company-details,
 .contacts-wrapper #client-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 1rem;
 }
-
 .contacts-wrapper .company-info {
   margin-top: 1rem;
   padding: 1rem;
   border-top: 1px solid #009e90;
   border-bottom: 1px solid #009e90;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
-
 .contacts-wrapper #client-details {
   margin-top: 1rem;
   padding: 1rem;
@@ -102,66 +82,54 @@ body {
   table-layout: fixed;
   overflow-wrap: break-word;
 }
-
 #product-table > thead {
   text-align: left;
 }
-
 #product-table > thead > tr > th {
   font-size: 1.2rem;
   padding: 1rem;
   background: #009e90;
   color: white;
 }
-
 #product-table > thead tr > th:last-child {
   text-align: right;
 }
-
 #product-table > thead tr > th:first-child {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-
 #product-table > thead tr > th:last-child {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
 #product-table > tbody > tr > td {
   border-bottom: 1px solid #009e90;
   padding: 1rem;
 }
-
 #product-table > tbody > tr > td:first-child {
   color: #bb3a24;
 }
-
 #product-table > tbody > tr > td:last-child {
   text-align: right;
 }
 
 #product-table-footer > * {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 1fr 1fr;
-      grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr;
   padding-top: 1rem;
   padding-left: 1rem;
   gap: 20px;
 }
-
-#product-table-footer > * [data-element="product-table-balance-due-label"],
-#product-table-footer > * [data-element="product-table-balance-due"] {
+#product-table-footer > * [data-element=product-table-balance-due-label],
+#product-table-footer > * [data-element=product-table-balance-due] {
   font-weight: bold;
 }
-
-#product-table-footer > * [data-element="product-table-balance-due"] {
+#product-table-footer > * [data-element=product-table-balance-due] {
   color: #009e90;
 }
-
 #product-table-footer > * > :last-child {
   text-align: right;
   padding-right: 1rem;
 }
+
 /*# sourceMappingURL=playful.css.map */
