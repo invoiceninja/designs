@@ -150,7 +150,6 @@ body {
 #product-table-footer > * [data-element="product-table-balance-due-label"],
 #product-table-footer > * [data-element="product-table-balance-due"] {
   font-weight: bold;
-  font-size: 1.4rem;
 }
 
 #product-table-footer > * [data-element="product-table-balance-due"] {
