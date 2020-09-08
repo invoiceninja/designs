@@ -106,17 +106,29 @@ body {
       background-color: $lighter-gray;
     }
   }
+}
 
-  > tfoot {
-    > tr {
-      > td {
-        padding: 1rem;
-      }
-    }
-
-    [data-element="balance-due"] {
-      color: $light-blue;
+#product-table-footer > {
+  * {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    gap: 20px;
+    
+    [data-element="product-table-balance-due-label"],
+    [data-element="product-table-balance-due"] {
       font-weight: bold;
     }
+  
+    [data-element="product-table-balance-due"] {
+      color: $light-blue;
+    }
+  }
+
+  * > :last-child {
+    text-align: right;
+    padding-right: 1rem;
   }
 }
+
